@@ -62,7 +62,7 @@ public class Ventas extends Registro {
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(volverAlMenúButton);
                 if (frame != null) {
-                    frame.dispose();
+                    VentasPanel.setVisible(false);
                 }
                 new Principal();
             }

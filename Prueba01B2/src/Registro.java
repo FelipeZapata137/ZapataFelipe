@@ -68,7 +68,7 @@ public class Registro extends JFrame {
         MenuBTN.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
+                RegistroPanel.setVisible(false);
                 new Principal();
             }
         });

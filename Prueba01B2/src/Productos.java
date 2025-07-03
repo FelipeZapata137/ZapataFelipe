@@ -52,9 +52,8 @@ public class Productos extends Registro {
         VolverAlMenúButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
-                new Principal();
                 ProductosPanel.setVisible(false);
+                new Principal();
             }
         });
     }

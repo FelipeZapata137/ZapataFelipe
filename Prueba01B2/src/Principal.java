@@ -27,7 +27,7 @@ public class Principal extends JFrame {
         RegistroBTN.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
+                PanelPrincipal.setVisible(false);
                 new Registro();
             }
         });
@@ -35,7 +35,7 @@ public class Principal extends JFrame {
         VentasBTN.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
+                PanelPrincipal.setVisible(false);
                 Ventas ventas = new Ventas();
             }
         });
@@ -43,7 +43,7 @@ public class Principal extends JFrame {
         ProductosBTN.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
+                PanelPrincipal.setVisible(false);;
                 Productos productos = new Productos();
             }
         });
