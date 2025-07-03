@@ -34,7 +34,7 @@ public class Login extends JFrame {
                     return;
                 }
 
-                if (usuario.equals("FelipeZapata123") && contrasena.equals("clave123")) {
+                if (usuario.equals("FelipeZapata") && contrasena.equals("clave123")) {
                     JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso");
                     dispose();
                     new Principal();

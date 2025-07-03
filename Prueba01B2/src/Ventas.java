@@ -3,7 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 
-public class Ventas extends JFrame {
+public class Ventas extends Registro {
     private JButton calcularButton;
     private JButton volverAlMenúButton;
     private JLabel PrintTotalLBL;
@@ -14,6 +14,7 @@ public class Ventas extends JFrame {
     private JLabel PrintSubTotalLBL;
     private JLabel PrintIvaLBL;
     private JPanel VentasPanel;
+    private JButton buscarButton;
     private DecimalFormat df = new DecimalFormat("#.##");
 
     public Ventas() {
@@ -64,6 +65,32 @@ public class Ventas extends JFrame {
                     frame.dispose();
                 }
                 new Principal();
+            }
+        });
+        buscarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String codigo = CodigoTXT.getText();
+                if (codigo.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Por favor, ingrese un código", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                int limite = ListaCodigo.size();
+
+                if (limite == 0) {
+                    JOptionPane.showMessageDialog(null, "No hay productos registrados", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                for (int i = 0; i < limite; i++) {
+                    if (ListaCodigo.get(i).equals(codigo)) {
+                        ProductoTXT.setText(ListaNombre.get(i));
+                        PrecioTXT.setText(ListaPrecio.get(i));
+                        return;
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "Producto no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
             }
         });
     }

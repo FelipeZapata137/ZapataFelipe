@@ -4,9 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Principal extends JFrame {
-    private CardLayout cl = new CardLayout();
     private JPanel PanelPrincipal;
-    private JPanel panelPrincipal = new JPanel(cl);
     private JButton RegistroBTN;
     private JButton VentasBTN;
     private JButton ProductosBTN;
@@ -30,7 +28,7 @@ public class Principal extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                cl.show(panelPrincipal, "RegistroPanel");
+                new Registro();
             }
         });
 
@@ -38,7 +36,7 @@ public class Principal extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                cl.show(panelPrincipal, "VentasPanel");
+                Ventas ventas = new Ventas();
             }
         });
 
@@ -46,7 +44,7 @@ public class Principal extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                cl.show(panelPrincipal, "ProductosPanel");
+                Productos productos = new Productos();
             }
         });
     }
