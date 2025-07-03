@@ -9,6 +9,7 @@ public class Login extends JFrame {
     private JPasswordField ContrasenaTXT;
     private JTextField UsuarioTXT;
     private JPanel LoginPanel;
+    private JButton limpiarButton;
 
     public Login() {
 
@@ -42,6 +43,14 @@ public class Login extends JFrame {
                     JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
                 }
 
+            }
+        });
+
+        limpiarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UsuarioTXT.setText("");
+                ContrasenaTXT.setText("");
             }
         });
     }

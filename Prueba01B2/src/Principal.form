@@ -14,6 +14,7 @@
         </constraints>
         <properties>
           <background color="-10650907"/>
+          <foreground color="-1"/>
           <text value="Registro"/>
         </properties>
       </component>
@@ -23,6 +24,7 @@
         </constraints>
         <properties>
           <background color="-10650907"/>
+          <foreground color="-1"/>
           <text value="Ventas"/>
         </properties>
       </component>
@@ -32,6 +34,7 @@
         </constraints>
         <properties>
           <background color="-10650907"/>
+          <foreground color="-1"/>
           <text value="Ver Productos"/>
         </properties>
       </component>
